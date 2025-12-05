@@ -73,8 +73,9 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#home">
+                        <!-- LOGO IMAGE (Header) -->
                         <img src="images/logo.png" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/200x50/FFFFFF/0F172A?text=YOUR+LOGO';" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/200x50/FFFFFF/0F172A?text=P.K.+Steel';" 
                              alt="P.K. Steel Center Logo" 
                              class="h-12 w-auto">
                     </a>
@@ -87,11 +88,13 @@
                 </nav>
 
                 <div class="flex items-center space-x-2 sm:space-x-3">
+                    <!-- Line Chat Button -->
                     <a href="https://line.me/R/ti/p/@pksteelcenter" target="_blank" rel="noopener noreferrer" class="cta-button line-btn-prominent flex items-center bg-line-green text-white px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm shadow-glow-green hover:shadow-glow-green-hover hover:bg-[#05b34c] focus:outline-none transition-all duration-300 transform hover:-translate-y-0.5 border border-transparent order-1">
                         <span class="font-extrabold text-lg sm:text-xl mr-1 sm:mr-2">L</span> 
                         <span class="sm:hidden">LINE</span>
                         <span class="hidden sm:inline">@pksteelcenter</span>
                     </a>
+                    <!-- Call Button -->
                     <a href="tel:028106607" class="cta-button flex items-center bg-gray-100 text-gray-800 px-3 py-2 rounded-lg font-semibold text-xs sm:text-sm hover:bg-gray-200 focus:outline-none border border-gray-200 order-2">
                         <svg class="w-4 h-4 mr-1 sm:mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         โทร
@@ -187,192 +190,303 @@
                 <div class="grid grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5">
                     
                     <!-- 1 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(0)">
-                        <img src="images/product-1.jpg" onerror="this.src='https://placehold.co/600x600/38BDF8/FFFFFF?text=1'" alt="1" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">สเตนเลสแผ่น - SUS 304,316L</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">HR No.1 / CR 2B</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(0)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-1.jpg" onerror="this.src='https://placehold.co/600x600/38BDF8/FFFFFF?text=1'" alt="1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden"> <!-- Hidden text wrapper, available for JS to read -->
+                            <h3>สเตนเลสแผ่น - SUS 304,316L</h3>
+                            <p>HR No.1 / CR 2B</p>
                         </div>
                     </div>
                     <!-- 2 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(1)">
-                        <img src="images/product-2.jpg" onerror="this.src='https://placehold.co/600x600/F59E0B/FFFFFF?text=2'" alt="2" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">เหล็กแผ่นชุบสังกะสี</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">G.I.</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(1)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-2.jpg" onerror="this.src='https://placehold.co/600x600/F59E0B/FFFFFF?text=2'" alt="2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>เหล็กแผ่นชุบสังกะสี</h3>
+                            <p>G.I.</p>
                         </div>
                     </div>
                     <!-- 3 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(2)">
-                        <img src="images/product-3.jpg" onerror="this.src='https://placehold.co/600x600/0F172A/FFFFFF?text=3'" alt="3" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">แผ่นเหล็กชุบซิงค์</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">E.G.</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(2)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-3.jpg" onerror="this.src='https://placehold.co/600x600/0F172A/FFFFFF?text=3'" alt="3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>แผ่นเหล็กชุบซิงค์</h3>
+                            <p>E.G.</p>
                         </div>
                     </div>
                     <!-- 4 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(3)">
-                        <img src="images/product-4.jpg" onerror="this.src='https://placehold.co/600x600/06C755/FFFFFF?text=4'" alt="4" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">อลูมิเนียมแผ่นเรียบ</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">AL AA1100</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(3)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-4.jpg" onerror="this.src='https://placehold.co/600x600/06C755/FFFFFF?text=4'" alt="4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>อลูมิเนียมแผ่นเรียบ</h3>
+                            <p>AL AA1100</p>
                         </div>
                     </div>
                     <!-- 5 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(4)">
-                        <img src="images/product-5.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=5'" alt="5" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">อลูมิเนียมแผ่นลาย กันลื่น</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">AL Thread Plate</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(4)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-5.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=5'" alt="5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>อลูมิเนียมแผ่นลาย กันลื่น</h3>
+                            <p>AL Thread Plate</p>
                         </div>
                     </div>
                     <!-- 6 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(5)">
-                        <img src="images/product-6.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=6'" alt="6" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">อลูมิเนียม ผิวส้ม</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">AL Embossed</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(5)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-6.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=6'" alt="6" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>อลูมิเนียม ผิวส้ม</h3>
+                            <p>AL Embossed</p>
                         </div>
                     </div>
                     <!-- 7 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(6)">
-                        <img src="images/product-7.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=7'" alt="7" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ตะแกรงสแตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Perforated Sheet</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(6)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-7.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=7'" alt="7" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ตะแกรงสแตนเลส 304</h3>
+                            <p>SUS Perforated Sheet</p>
                         </div>
                     </div>
                     <!-- 8 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(7)">
-                        <img src="images/product-8.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=8'" alt="8" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ตะแกรงเหล็ก</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">Perforated Steel Sheet</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(7)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-8.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=8'" alt="8" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ตะแกรงเหล็ก</h3>
+                            <p>Perforated Steel Sheet</p>
                         </div>
                     </div>
                     <!-- 9 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(8)">
-                        <img src="images/product-9.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=9'" alt="9" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">เส้นแบนสเตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Flat Bar</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(8)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-9.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=9'" alt="9" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>เส้นแบนสเตนเลส 304</h3>
+                            <p>SUS Flat Bar</p>
                         </div>
                     </div>
                     <!-- 10 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(9)">
-                        <img src="images/product-10.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=10'" alt="10" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">สเตนเลสแผ่น 304 แฮร์ไลน์</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">HL</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(9)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-10.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=10'" alt="10" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>สเตนเลสแผ่น 304 แฮร์ไลน์</h3>
+                            <p>HL</p>
                         </div>
                     </div>
                     <!-- 11 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(10)">
-                        <img src="images/product-11.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=11'" alt="11" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">สเตนเลสแผ่น 304 เงา และ มิลเลอร์</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">BA, No.8</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(10)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-11.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=11'" alt="11" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>สเตนเลสแผ่น 304 เงา และ มิลเลอร์</h3>
+                            <p>BA, No.8</p>
                         </div>
                     </div>
                     <!-- 12 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(11)">
-                        <img src="images/product-12.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=12'" alt="12" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">สเตนเลสแผ่น ลายกันลื่น 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Thread Plate</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(11)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-12.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=12'" alt="12" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>สเตนเลสแผ่น ลายกันลื่น 304</h3>
+                            <p>SUS Thread Plate</p>
                         </div>
                     </div>
                     <!-- 13 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(12)">
-                        <img src="images/product-13.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=13'" alt="13" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ท่อกลมเงา สเตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">Bright Round Ornamental Tube</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(12)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-13.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=13'" alt="13" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ท่อกลมเงา สเตนเลส 304</h3>
+                            <p>Bright Round Ornamental Tube</p>
                         </div>
                     </div>
                     <!-- 14 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(13)">
-                        <img src="images/product-14.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=14'" alt="14" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ท่อสี่เหลี่ยม / ท่อกล่อง 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">Square / Rectangular Tube</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(13)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-14.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=14'" alt="14" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ท่อสี่เหลี่ยม / ท่อกล่อง 304</h3>
+                            <p>Square / Rectangular Tube</p>
                         </div>
                     </div>
                     <!-- 15 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(14)">
-                        <img src="images/product-15.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=15'" alt="15" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ท่ออุตสาหกรรมสเตนเลส NB 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS NB Pipe</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(14)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-15.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=15'" alt="15" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ท่ออุตสาหกรรมสเตนเลส NB 304</h3>
+                            <p>SUS NB Pipe</p>
                         </div>
                     </div>
                     <!-- 16 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(15)">
-                        <img src="images/product-16.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=16'" alt="16" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">เพลากลม สเตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Round Bar</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(15)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-16.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=16'" alt="16" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>เพลากลม สเตนเลส 304</h3>
+                            <p>SUS Round Bar</p>
                         </div>
                     </div>
                     <!-- 17 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(16)">
-                        <img src="images/product-17.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=17'" alt="17" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">เพลาสี่เหลี่ยมสเตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Square Bar</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(16)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-17.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=17'" alt="17" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>เพลาสี่เหลี่ยมสเตนเลส 304</h3>
+                            <p>SUS Square Bar</p>
                         </div>
                     </div>
                     <!-- 18 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(17)">
-                        <img src="images/product-18.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=18'" alt="18" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ฉากสเตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Angle Bar</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(17)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-18.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=18'" alt="18" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ฉากสเตนเลส 304</h3>
+                            <p>SUS Angle Bar</p>
                         </div>
                     </div>
                     <!-- 19 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(18)">
-                        <img src="images/product-19.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=19'" alt="19" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">รางตัวยู สเตนเลส 304</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS U Shaped</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(18)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-19.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=19'" alt="19" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>รางตัวยู สเตนเลส 304</h3>
+                            <p>SUS U Shaped</p>
                         </div>
                     </div>
                     <!-- 20 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(19)">
-                        <img src="images/product-20.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=20'" alt="20" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">ลวด / ลวดเชื่อมสเตนเลส</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Wire & Welding Rod</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(19)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-20.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=20'" alt="20" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>ลวด / ลวดเชื่อมสเตนเลส</h3>
+                            <p>SUS Wire & Welding Rod</p>
                         </div>
                     </div>
                     <!-- 21 -->
-                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer" onclick="openModal(20)">
-                        <img src="images/product-21.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=21'" alt="21" class="w-full h-24 md:h-40 object-cover">
-                        <div class="p-2 flex-grow">
-                            <h3 class="text-xs md:text-sm font-bold text-primary mb-0.5 leading-tight">อุปกรณ์ฟิตติงส์ และ น้ำยาลบรอยเชื่อม</h3>
-                            <p class="text-[10px] md:text-xs text-gray-500 leading-tight">SUS Fitting & Accessories</p>
+                    <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(20)">
+                        <div class="relative w-full h-24 md:h-40 overflow-hidden">
+                            <img src="images/product-21.jpg" onerror="this.src='https://placehold.co/600x600/E2E8F0/475569?text=21'" alt="21" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="hidden">
+                            <h3>อุปกรณ์ฟิตติงส์ และ น้ำยาลบรอยเชื่อม</h3>
+                            <p>SUS Fitting & Accessories</p>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-primary mb-12 text-center">สำนักงานใหญ่และศูนย์กระจายสินค้า</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-6 lg:order-2">
+                        <h3 class="text-2xl font-semibold text-primary">ติดต่อเราโดยตรง</h3>
+                        <p class="text-lg text-gray-600">เราพร้อมให้ความช่วยเหลือด้านความต้องการสเตนเลสของคุณ</p>
+                        <div class="space-y-4 pt-4">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-800">สายด่วนฝ่ายขาย</p>
+                                    <a href="tel:028106607" class="text-lg text-primary hover:text-secondary transition duration-150">02 810 6607 (-10)</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="w-6 h-6 flex-shrink-0 mt-1 text-line-green font-extrabold text-2xl leading-none flex items-center justify-center">L</span>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-800">ไลน์ไอดี (Line ID)</p>
+                                    <a href="https://line.me/R/ti/p/@pksteelcenter" target="_blank" rel="noopener noreferrer" class="text-lg text-primary hover:text-secondary transition duration-150">@pksteelcenter</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-17 4v7a2 2 0 002 2h14a2 2 0 002-2v-7"></path></svg>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-800">อีเมลหาเรา</p>
+                                    <a href="mailto:pksteelcenter@hotmail.com" class="text-lg text-primary hover:text-secondary transition duration-150">pksteelcenter@hotmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-800">ที่ตั้งสำนักงาน</p>
+                                    <address class="not-italic text-lg text-primary">
+                                        884-886 ถนนเพชรเกษม <br>
+                                        แขวงหนองค้างพลู เขตหนองแขม กรุงเทพมหานคร 10160
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-xl shadow-2xl overflow-hidden lg:order-1">
+                        <!-- Updated Map to specifically target P.K. Steel Center -->
+                        <iframe 
+                            src="https://maps.google.com/maps?q=P.K.+Steel+Center+884+886+Phet+Kasem+Rd,+Nong+Khang+Phlu,+Nong+Khaem,+Bangkok+10160&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-96 lg:h-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-primary text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
+                    <!-- LOGO IMAGE (Footer) - NO INVERT -->
                     <div class="mb-4">
-                        <img src="images/logo.png" onerror="this.onerror=null; this.src='https://placehold.co/200x50/0F172A/FFFFFF?text=YOUR+LOGO';" alt="Company Logo" class="h-16 w-auto"> 
+                        <img src="images/logo.png" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/200x50/0F172A/FFFFFF?text=YOUR+LOGO';" 
+                             alt="Company Logo" 
+                             class="h-16 w-auto"> 
                     </div>
                     <p class="text-sm text-gray-400 mb-4">คู่ค้าที่คุณวางใจมากกว่า 30 ปี</p>
                     <div class="flex space-x-4">
                         <a href="https://line.me/R/ti/p/@pksteelcenter" target="_blank" rel="noopener noreferrer" class="text-line-green hover:text-white transition duration-150 text-2xl font-bold">L</a>
-                        <a href="tel:028106607" class="text-accent hover:text-white transition duration-150 text-2xl"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></a>
+                        <a href="tel:028106607" class="text-accent hover:text-white transition duration-150 text-2xl">
+                            <!-- Clean Phone Icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </a>
                     </div>
                 </div>
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-secondary">ลิงก์ด่วน</h4>
                     <ul class="space-y-2 text-sm">
@@ -381,6 +495,7 @@
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-150">ติดต่อเรา</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-secondary">ติดต่อเรา</h4>
                     <ul class="space-y-2 text-sm">
@@ -391,13 +506,19 @@
                         <li><a href="https://line.me/R/ti/p/@pksteelcenter" class="text-gray-400 hover:text-white transition duration-150">Line ID: @pksteelcenter</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-secondary">พันธสัญญาของเรา</h4>
-                    <p class="text-sm text-gray-400">เรามุ่งมั่นที่จะนำเสนอผลิตภัณฑ์สเตนเลสคุณภาพสูงสุดพร้อมการสนับสนุนด้านโลจิสติกส์ที่เหนือชั้น</p>
+                    <p class="text-sm text-gray-400">
+                        เรามุ่งมั่นที่จะนำเสนอผลิตภัณฑ์สเตนเลสคุณภาพสูงสุดพร้อมการสนับสนุนด้านโลจิสติกส์ที่เหนือชั้น
+                    </p>
                 </div>
             </div>
+
             <div class="mt-10 pt-6 border-t border-gray-700 text-center">
-                <p class="text-sm text-gray-500">&copy; 2025 P.K. Steel Center. สงวนลิขสิทธิ์.</p>
+                <p class="text-sm text-gray-500">
+                    &copy; 2025 P.K. Steel Center. สงวนลิขสิทธิ์.
+                </p>
             </div>
         </div>
     </footer>
@@ -457,27 +578,27 @@
         // Format: { ProductIndex: ["path/to/image1.jpg", "path/to/image2.jpg"] }
         // Product 1 = Index 0, Product 2 = Index 1, etc.
         const productExtraImages = {
-            // 0: ["images/product-1-a.jpg", "images/product-1-b.jpg"],
-            // 1: ["images/product-2-a.jpg", "images/product-2-b.jpg"],
-            // 2: ["images/product-3-a.jpg", "images/product-3-b.jpg"],
-            // 3: ["images/product-4-a.jpg", "images/product-4-b.jpg"],
-             4: ["images/product-5-a.jpg", "images/product-5-b.jpg"],
-            // 5: ["images/product-6-a.jpg", "images/product-6-b.jpg"],
-            // 6: ["images/product-7-a.jpg", "images/product-7-b.jpg"],
-            // 7: ["images/product-8-a.jpg", "images/product-8-b.jpg"],
-            // 8: ["images/product-9-a.jpg", "images/product-9-b.jpg"],
-            // 9: ["images/product-10-a.jpg", "images/product-10-b.jpg"],
-            // 10: ["images/product-11-a.jpg", "images/product-11-b.jpg"],
-            // 11: ["images/product-12-a.jpg", "images/product-12-b.jpg"],
-            // 12: ["images/product-13-a.jpg", "images/product-13-b.jpg"],
-            // 13: ["images/product-14-a.jpg", "images/product-14-b.jpg"],
-            // 14: ["images/product-15-a.jpg", "images/product-15-b.jpg"],
-            // 15: ["images/product-16-a.jpg", "images/product-16-b.jpg"],
-            // 16: ["images/product-17-a.jpg", "images/product-17-b.jpg"],
-            // 17: ["images/product-18-a.jpg", "images/product-18-b.jpg"],
-            // 18: ["images/product-19-a.jpg", "images/product-19-b.jpg"],
-            // 19: ["images/product-20-a.jpg", "images/product-20-b.jpg"],
-            // 20: ["images/product-21-a.jpg", "images/product-21-b.jpg"]
+            0: ["images/product-1-a.jpg", "images/product-1-b.jpg"],
+            1: ["images/product-2-a.jpg", "images/product-2-b.jpg"],
+            2: ["images/product-3-a.jpg", "images/product-3-b.jpg"],
+            3: ["images/product-4-a.jpg", "images/product-4-b.jpg"],
+            4: ["images/product-5-a.jpg", "images/product-5-b.jpg"],
+            5: ["images/product-6-a.jpg", "images/product-6-b.jpg"],
+            6: ["images/product-7-a.jpg", "images/product-7-b.jpg"],
+            7: ["images/product-8-a.jpg", "images/product-8-b.jpg"],
+            8: ["images/product-9-a.jpg", "images/product-9-b.jpg"],
+            9: ["images/product-10-a.jpg", "images/product-10-b.jpg"],
+            10: ["images/product-11-a.jpg", "images/product-11-b.jpg"],
+            11: ["images/product-12-a.jpg", "images/product-12-b.jpg"],
+            12: ["images/product-13-a.jpg", "images/product-13-b.jpg"],
+            13: ["images/product-14-a.jpg", "images/product-14-b.jpg"],
+            14: ["images/product-15-a.jpg", "images/product-15-b.jpg"],
+            15: ["images/product-16-a.jpg", "images/product-16-b.jpg"],
+            16: ["images/product-17-a.jpg", "images/product-17-b.jpg"],
+            17: ["images/product-18-a.jpg", "images/product-18-b.jpg"],
+            18: ["images/product-19-a.jpg", "images/product-19-b.jpg"],
+            19: ["images/product-20-a.jpg", "images/product-20-b.jpg"],
+            20: ["images/product-21-a.jpg", "images/product-21-b.jpg"]
         };
 
         // --- 2. LOGIC ---
@@ -519,10 +640,10 @@
 
             const product = products[currentProductIndex];
             
-            // Get Data from Card
+            // Get Data from Card using textContent because elements are hidden
             const mainImgSrc = product.querySelector('img').src;
-            const title = product.querySelector('h3').innerText;
-            const desc = product.querySelector('p').innerText;
+            const title = product.querySelector('h3').textContent;
+            const desc = product.querySelector('p').textContent;
 
             // Build Gallery List (Main + Extras)
             currentImageList = [mainImgSrc];
@@ -535,8 +656,8 @@
             updateGalleryView();
 
             // Set Text
-            modalTitle.innerText = title;
-            modalDesc.innerText = desc;
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
         }
 
         function updateGalleryView() {
