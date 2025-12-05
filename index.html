@@ -70,12 +70,14 @@
     <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#home">
+                <!-- Logo Container (Updated: Constrained width on mobile) -->
+                <div class="flex-shrink-0 flex items-center max-w-[50%] sm:max-w-none">
+                    <a href="#home" class="block">
+                        <!-- LOGO IMAGE (Header) -->
                         <img src="images/logo.png" 
                              onerror="this.onerror=null; this.src='https://placehold.co/200x50/FFFFFF/0F172A?text=P.K.+Steel';" 
                              alt="P.K. Steel Center Logo" 
-                             class="h-12 w-auto">
+                             class="h-10 sm:h-12 w-auto max-w-full object-contain">
                     </a>
                 </div>
 
