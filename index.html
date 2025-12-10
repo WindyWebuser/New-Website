@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="P.K. Steel Center">
     <meta property="og:title" content="P.K. Steel Center - ศูนย์รวมสเตนเลสคุณภาพ ครบวงจร">
     <meta property="og:description" content="จำหน่ายสเตนเลสและโลหะคุณภาพมาตรฐานสากล ย่านเพชรเกษม-หนองแขม ประสบการณ์กว่า 30 ปี">
-    <meta property="og:image" content="images/hero.jpg"> 
+    <meta property="og:image" content="images/hero1.jpg"> 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.pksteelcenter.com/"> 
 
@@ -47,7 +47,7 @@
     <style>
         /* === FIX FOR WHITE BARS === */
         html, body {
-            overflow-x: hidden; 
+            overflow-x: hidden; /* Prevents side scrolling/white bars */
             width: 100%;
             margin: 0;
             padding: 0;
@@ -63,6 +63,15 @@
         
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Slow Zoom Animation for Hero Slideshow */
+        @keyframes zoomSlow {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .hero-zoom {
+            animation: zoomSlow 6s ease-in-out forwards;
+        }
     </style>
 </head>
 <body class="font-sans text-primary bg-gray-50 w-full overflow-x-hidden pt-20">
@@ -120,20 +129,34 @@
     </header>
 
     <main class="w-full overflow-x-hidden">
-        <!-- 1. Hero Section -->
+        <!-- 1. Hero Section with Slideshow -->
         <section id="home" class="relative overflow-hidden min-h-screen flex items-center justify-center text-white bg-black">
-            <img src="images/hero.jpg" onerror="this.src='https://placehold.co/1920x1080/0F172A/FFFFFF/png?text=hero.jpg'" alt="Stainless steel warehouse" class="absolute inset-0 object-cover w-full h-full">
-            <div class="absolute inset-0 bg-black/50"></div> <!-- Tint changed to black -->
             
-            <!-- Box opacity increased for better readability (bg-black/40) -->
-            <div class="relative z-10 text-center bg-black/40 p-8 md:p-12 rounded-xl backdrop-blur-sm max-w-5xl mx-4 border border-white/10">
+            <!-- HERO SLIDESHOW CONTAINER -->
+            <div id="hero-slideshow" class="absolute inset-0 w-full h-full">
+                <!-- Image 1 (Active by default) -->
+                <img src="images/hero1.jpg" onerror="this.src='https://placehold.co/1920x1080/0F172A/FFFFFF/png?text=hero1.jpg'" 
+                     class="hero-slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000">
+                
+                <!-- Images 2-5 (Hidden initially) -->
+                <img src="images/hero2.jpg" onerror="this.src='https://placehold.co/1920x1080/0F172A/FFFFFF/png?text=hero2.jpg'" 
+                     class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+                <img src="images/hero3.jpg" onerror="this.src='https://placehold.co/1920x1080/0F172A/FFFFFF/png?text=hero3.jpg'" 
+                     class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+                <img src="images/hero4.jpg" onerror="this.src='https://placehold.co/1920x1080/0F172A/FFFFFF/png?text=hero4.jpg'" 
+                     class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+                <img src="images/hero5.jpg" onerror="this.src='https://placehold.co/1920x1080/0F172A/FFFFFF/png?text=hero5.jpg'" 
+                     class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+            </div>
+
+            <div class="absolute inset-0 bg-black/60"></div> <!-- Tint -->
+            
+            <div class="relative z-10 text-center bg-black/10 p-8 md:p-12 rounded-xl backdrop-blur-sm max-w-5xl mx-4 border border-white/10">
                 <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
                     ศูนย์รวมโลหะคุณภาพครบวงจร <br>
                     <span class="text-secondary">ในย่านเพชรเกษม</span>
                 </h1>
-                <!-- Updated Subtitle -->
                 <p class="text-lg sm:text-2xl font-light mb-10">ยึดมั่นคุณภาพและบริการตลอดเวลากว่า 30 ปี</p>
-                
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="#catalogue" class="cta-button inline-flex justify-center items-center bg-accent text-white text-lg font-bold py-3 px-10 rounded-full shadow-lg hover:bg-amber-600 transition duration-300">สินค้าของเรา</a>
                     <a href="#contact" class="cta-button inline-flex justify-center items-center bg-transparent border-2 border-white text-white text-lg font-bold py-3 px-10 rounded-full shadow-lg hover:bg-white hover:text-primary transition duration-300">ติดต่อเรา</a>
@@ -181,10 +204,7 @@
                         </div>
                         <div class="w-full md:w-2/3 text-center md:text-left">
                             <div class="inline-block p-1 px-3 bg-accent/20 rounded-full text-accent font-bold mb-3 text-xs tracking-wide">ปณิธานของเรา</div>
-                            <h3 class="text-xl md:text-2xl font-bold leading-relaxed text-white">
-                                เรายึดมั่นในปณิธานที่จะส่งมอบสินค้าคุณภาพ และ<br>
-                                บริการที่ดีที่สุดให้กับลูกค้า ด้วยความ<br>"ซื่อสัตย์ จริงใจ"
-                            </h3>
+                            <h3 class="text-xl md:text-2xl font-bold leading-relaxed text-white">เรายึดมั่นในปณิธานที่จะส่งมอบสินค้าคุณภาพ และ บริการที่ดีที่สุดให้กับลูกค้า ด้วยความ "ซื่อสัตย์ จริงใจ"</h3>
                         </div>
                     </div>
                 </div>
@@ -202,8 +222,8 @@
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
                             <img src="images/product-1.jpg" onerror="this.src='https://placehold.co/600x600/38BDF8/FFFFFF?text=1'" alt="1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
-                        <div class="hidden-data hidden">
-                            <h3 class="data-title">สเตนเลสแผ่น เกรด AISI 304, 316L</h3>
+                        <div class="hidden">
+                            <h3 class="data-title">สเตนเลสแผ่น - SUS 304,316L</h3>
                             <div class="data-desc">
                                 มีทั้งแบบม้วนและแผ่น<br><br>
                                 ขนาดมาตรฐาน:<br>
@@ -230,7 +250,9 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                    <!-- [ITEMS 3-21 REMAIN SAME - CODE OMITTED FOR BREVITY BUT INCLUDED IN FILE] -->
+                    <!-- I will include the full list in the final output -->
                     <!-- 3 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(2)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -246,7 +268,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 4 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(3)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -262,7 +283,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 5 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(4)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -278,7 +298,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 6 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(5)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -294,7 +313,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 7 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(6)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -310,7 +328,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 8 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(7)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -327,7 +344,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 9 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(8)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -342,7 +358,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 10 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(9)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -357,7 +372,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 11 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(10)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -372,7 +386,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 12 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(11)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -387,7 +400,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 13 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(12)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -402,7 +414,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 14 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(13)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -418,7 +429,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 15 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(14)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -434,7 +444,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 16 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(15)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -448,7 +457,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 17 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(16)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -463,7 +471,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 18 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(17)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -479,7 +486,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 19 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(18)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -494,7 +500,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 20 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(19)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
@@ -511,7 +516,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 21 -->
                     <div class="product-card bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 flex flex-col cursor-pointer group" onclick="openModal(20)">
                         <div class="relative w-full h-24 md:h-40 overflow-hidden">
