@@ -80,7 +80,8 @@
     <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 flex items-center max-w-[50%] sm:max-w-none">
+                <!-- 1. Logo Container (Updated: Wider on mobile ~3/4) -->
+                <div class="flex-shrink-0 flex items-center max-w-[70%] sm:max-w-none">
                     <a href="#home" class="block">
                         <img src="images/logo.png" 
                              onerror="this.onerror=null; this.src='https://placehold.co/200x50/FFFFFF/0F172A?text=P.K.+Steel';" 
@@ -95,20 +96,23 @@
                     <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-secondary transition duration-150">ติดต่อเรา</a>
                 </nav>
 
-                <div class="flex items-center space-x-2 sm:space-x-3">
-                    <a href="https://line.me/R/ti/p/@pksteelcenter" target="_blank" rel="noopener noreferrer" class="cta-button line-btn-prominent flex items-center bg-line-green text-white px-2 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm shadow-glow-green hover:shadow-glow-green-hover hover:bg-[#05b34c] focus:outline-none transition-all duration-300 transform hover:-translate-y-0.5 border border-transparent order-1 max-w-[140px] sm:max-w-none overflow-hidden">
-                        <img src="images/line.jpg" alt="LINE" class="w-5 h-5 sm:w-6 sm:h-6 mr-1.5 sm:mr-2 rounded-sm flex-shrink-0">
-                        <span class="sm:hidden truncate">@pksteelcenter</span>
+                <!-- 2. Contact Buttons (Updated: Stacked on mobile, "LINE" text only) -->
+                <div class="flex flex-col sm:flex-row items-end sm:items-center justify-center space-y-1 sm:space-y-0 sm:space-x-3 mr-2 sm:mr-0">
+                    <!-- Line Chat Button -->
+                    <a href="https://line.me/R/ti/p/@pksteelcenter" target="_blank" rel="noopener noreferrer" class="cta-button line-btn-prominent flex items-center bg-line-green text-white px-2 py-1 sm:px-5 sm:py-2.5 rounded-lg font-bold text-[10px] sm:text-sm shadow-glow-green hover:shadow-glow-green-hover hover:bg-[#05b34c] focus:outline-none transition-all duration-300 transform hover:-translate-y-0.5 border border-transparent order-1 w-full sm:w-auto justify-center">
+                        <img src="images/line.jpg" alt="LINE" class="w-3 h-3 sm:w-6 sm:h-6 mr-1 sm:mr-2 rounded-sm flex-shrink-0">
+                        <span class="sm:hidden">LINE</span> <!-- Minimal text for mobile -->
                         <span class="hidden sm:inline">@pksteelcenter</span>
                     </a>
-                    <a href="tel:028106607" class="cta-button flex items-center bg-gray-100 text-gray-800 px-3 py-2 rounded-lg font-semibold text-xs sm:text-sm hover:bg-gray-200 focus:outline-none border border-gray-200 order-2">
-                        <svg class="w-4 h-4 mr-1 sm:mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <!-- Call Button -->
+                    <a href="tel:028106607" class="cta-button flex items-center bg-gray-100 text-gray-800 px-2 py-1 sm:px-3 sm:py-2 rounded-lg font-semibold text-[10px] sm:text-sm hover:bg-gray-200 focus:outline-none border border-gray-200 order-2 w-full sm:w-auto justify-center">
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         โทร
                     </a>
                 </div>
 
                 <button id="menu-button" type="button" class="md:hidden p-2 text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary rounded-lg" aria-expanded="false">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </div>
