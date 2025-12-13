@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pksteelcenter.com/sitemap.xml
+Sitemap: https://pksteelcenter.net/sitemap.xml
