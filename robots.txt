@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Block access to any potential admin or config files
+Disallow: /admin/
+Disallow: /*.json$
+
+# Crawl delay to be polite
+Crawl-delay: 10
+
 Sitemap: https://pksteelcenter.net/sitemap.xml
